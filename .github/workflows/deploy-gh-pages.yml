@@ -1,4 +1,4 @@
-# Deploy client to GitHub Pages (https://<user>.github.io/nepali-grocery-japan/)
+# Deploy client to GitHub Pages (https://<user>.github.io/himalayan-baazar/)
 name: Deploy to GitHub Pages
 
 on:
@@ -36,8 +36,11 @@ jobs:
 
       - name: Build for GitHub Pages
         env:
-          VITE_BASE_PATH: /nepali-grocery-japan/
+          VITE_BASE_PATH: /himalayan-baazar/
         run: pnpm run build:gh-pages
+
+      - name: Add 404 fallback for SPA routing
+        run: cp dist/public/index.html dist/public/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
