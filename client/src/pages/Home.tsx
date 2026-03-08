@@ -77,32 +77,6 @@ const categories = [
   },
 ];
 
-/*
-const testimonials = [
-  {
-    name: "Sita Sharma",
-    location: "Shinjuku, Tokyo",
-    rating: 5,
-    text: "Finally a place in Tokyo where I can find authentic Nepali products. The dal bhat tastes just like home! The staff are incredibly friendly and helpful.",
-    initials: "SS",
-  },
-  {
-    name: "Bikram Thapa",
-    location: "Osaka",
-    rating: 5,
-    text: "I travel from Osaka just to shop here. The quality of spices is unmatched — fresh, aromatic, and exactly what I need for my Nepali cooking.",
-    initials: "BT",
-  },
-  {
-    name: "Anita Gurung",
-    location: "Yokohama",
-    rating: 5,
-    text: "Himalayan Bazaar is a lifesaver for us Nepalis in Japan. They carry everything from Wai Wai noodles to fresh methi leaves. Highly recommended!",
-    initials: "AG",
-  },
-];
-*/
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-[oklch(0.985_0.012_80)]">
@@ -134,7 +108,7 @@ export default function Home() {
             >
               <span className="w-2 h-2 rounded-full bg-[oklch(0.72_0.16_65)] animate-pulse" />
               <span className="font-body text-sm font-semibold text-[oklch(0.92_0.05_75)] tracking-wide">
-                Tokyo's Authentic Nepali Grocery
+                Japan's Authentic Nepali Grocery
               </span>
             </motion.div>
 
@@ -344,76 +318,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Commented out: Testimonials section (lines 346–411). Remove the false && to restore. */}
-      {false && (
-        <>
-      {/* ─── TESTIMONIALS ─── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            className="text-center mb-14"
-          >
-            <motion.div variants={fadeUp} custom={0} className="flex justify-center mb-4">
-              <div className="section-divider" />
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              custom={1}
-              className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)]"
-            >
-              What Our Customers Say
-            </motion.h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-60px" }}
-                variants={fadeUp}
-                custom={i * 0.15}
-                className="bg-[oklch(0.985_0.012_80)] rounded-2xl p-7 border border-amber-100 hover:shadow-lg transition-shadow duration-300"
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star
-                      key={j}
-                      className="w-4 h-4 fill-[oklch(0.72_0.16_65)] text-[oklch(0.72_0.16_65)]"
-                    />
-                  ))}
-                </div>
-                <p className="font-body text-sm text-[oklch(0.38_0.05_60)] leading-relaxed mb-6 italic">
-                  "{t.text}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[oklch(0.52_0.14_38)] flex items-center justify-center">
-                    <span className="font-display text-sm font-bold text-white">
-                      {t.initials}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-body font-semibold text-sm text-[oklch(0.22_0.05_50)]">
-                      {t.name}
-                    </p>
-                    <p className="font-body text-xs text-[oklch(0.52_0.05_60)]">
-                      {t.location}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-        </>
-      )}
 
       <Footer />
     </div>
