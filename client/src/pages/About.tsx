@@ -124,7 +124,7 @@ export default function About() {
                   Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Lyatosh Rai arrived in Japan in 2013, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
                 </p>
                 <p>
-                  After years of improvising with substitute ingredients and making expensive trips to import shops, Ramesh decided to do something about it. In 2015, he opened Himalayan Bazaar in Japan's multicultural heart — with a modest selection of 80 products and a big dream.
+                  After years of improvising with substitute ingredients and making expensive trips to import shops, Lyatosh decided to do something about it. In 2015, he opened Himalayan Bazaar in Japan's multicultural heart — with a modest selection of 80 products and a big dream.
                 </p>
                 <p>
                   Today, we stock over 500 authentic Nepali and South Asian products, serve thousands of customers across Japan, and have become more than just a grocery store. We are a community hub — a place where Nepalis gather, share recipes, celebrate festivals, and feel a little closer to home.

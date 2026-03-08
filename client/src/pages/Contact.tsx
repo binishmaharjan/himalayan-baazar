@@ -134,7 +134,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
-                        placeholder="Ramesh Shrestha"
+                        placeholder="Lyatosh Rai"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className={inputClass}
