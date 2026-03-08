@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Router, Switch } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
@@ -9,9 +10,6 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
-// Vite sets BASE_URL from config (e.g. /himalayan-baazar/ on GitHub Pages)
-const base = import.meta.env.BASE_URL;
 
 function AppRouter() {
   return (
@@ -35,7 +33,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster richColors position="top-right" />
-          <Router base={base}>
+          <Router hook={useHashLocation}>
             <AppRouter />
           </Router>
         </TooltipProvider>
