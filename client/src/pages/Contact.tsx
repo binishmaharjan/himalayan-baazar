@@ -21,29 +21,6 @@ const fadeUp = {
   }),
 };
 
-const faqs = [
-  {
-    q: "Do you offer home delivery?",
-    a: "Yes! We offer home delivery across the Kanto region (Tokyo, Kanagawa, Saitama, Chiba). Orders above ¥5,000 qualify for free delivery. Please contact us to arrange delivery.",
-  },
-  {
-    q: "Can I place a special order for products not in stock?",
-    a: "Absolutely. We accept special orders for products not currently on our shelves. Our procurement team travels to Nepal twice a year and can source almost any authentic Nepali product. Contact us with your request.",
-  },
-  {
-    q: "Do you sell wholesale to restaurants?",
-    a: "Yes, we supply several Nepali and South Asian restaurants across Japan. We offer competitive wholesale pricing for bulk orders. Please contact us for our wholesale catalogue.",
-  },
-  {
-    q: "Are your products certified halal?",
-    a: "Several of our products are halal certified. Please ask our staff in-store or contact us for a list of halal-certified products.",
-  },
-  {
-    q: "Do you accept credit cards?",
-    a: "Yes, we accept all major credit cards, IC cards (Suica, Pasmo), and cash. We also accept PayPay and LINE Pay.",
-  },
-];
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -340,69 +317,6 @@ export default function Contact() {
                 </div>
               </motion.div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── FAQ ─── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <motion.div variants={fadeUp} custom={0} className="flex justify-center mb-4">
-              <div className="section-divider" />
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              custom={1}
-              className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)]"
-            >
-              Frequently Asked Questions
-            </motion.h2>
-          </motion.div>
-
-          <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                custom={i * 0.1}
-                className="bg-[oklch(0.985_0.012_80)] rounded-xl border border-amber-100 overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between px-6 py-4 text-left"
-                >
-                  <span className="font-display text-base font-bold text-[oklch(0.22_0.05_50)]">
-                    {faq.q}
-                  </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[oklch(0.52_0.14_38)] shrink-0 transition-transform duration-200 ${
-                      openFaq === i ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openFaq === i && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="px-6 pb-5"
-                  >
-                    <p className="font-body text-sm text-[oklch(0.38_0.05_60)] leading-relaxed">
-                      {faq.a}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
