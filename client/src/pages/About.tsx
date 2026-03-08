@@ -50,11 +50,11 @@ export default function About() {
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-28 pb-14 bg-[oklch(0.52_0.14_38)] relative overflow-hidden">
+      <section className="pt-28 pb-14 bg-[oklch(0.32_0.09_145)] relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: "repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.08) 20px, rgba(255,255,255,0.08) 40px)",
+            backgroundImage: "repeating-linear-gradient(60deg, transparent, transparent 20px, rgba(255,255,255,0.06) 20px, rgba(255,255,255,0.06) 40px)",
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -63,14 +63,14 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-body text-xs font-semibold tracking-[0.25em] text-[oklch(0.92_0.05_75)] uppercase mb-3">
+            <p className="font-body text-xs font-semibold tracking-[0.25em] text-[oklch(0.72_0.16_65)] uppercase mb-3">
               Our Story
             </p>
             <h1 className="font-display text-5xl sm:text-6xl font-black text-white mb-4">
               About Us
             </h1>
             <p className="font-body text-lg text-white/80 max-w-xl">
-              A family-run Nepali grocery store in the heart of Tokyo, built on love for our culture and community.
+              A family-run Nepali grocery store in the heart of Japan, built on love for our culture and community.
             </p>
           </motion.div>
         </div>
@@ -118,7 +118,7 @@ export default function About() {
                 custom={1}
                 className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)] mb-6"
               >
-                From Kathmandu to Tokyo — A Story of Home
+                From Kathmandu to Japan — A Story of Home
               </motion.h2>
               <motion.div
                 variants={fadeUp}
@@ -126,10 +126,10 @@ export default function About() {
                 className="space-y-4 font-body text-[oklch(0.38_0.05_60)] leading-relaxed"
               >
                 <p>
-                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Ramesh Shrestha arrived in Tokyo in 2010, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
+                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Ramesh Shrestha arrived in Japan in 2010, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
                 </p>
                 <p>
-                  After years of improvising with substitute ingredients and making expensive trips to import shops, Ramesh decided to do something about it. In 2015, he opened Himalayan Bazaar in Shin-Okubo — Tokyo's multicultural heart — with a modest selection of 80 products and a big dream.
+                  After years of improvising with substitute ingredients and making expensive trips to import shops, Ramesh decided to do something about it. In 2015, he opened Himalayan Bazaar in Japan's multicultural heart — with a modest selection of 80 products and a big dream.
                 </p>
                 <p>
                   Today, we stock over 500 authentic Nepali and South Asian products, serve thousands of customers across Japan, and have become more than just a grocery store. We are a community hub — a place where Nepalis gather, share recipes, celebrate festivals, and feel a little closer to home.
@@ -156,7 +156,12 @@ export default function About() {
       </section>
 
       {/* ─── VALUES ─── */}
-      <section className="py-20 bg-[oklch(0.22_0.07_145)]">
+      <section className="py-16 bg-[oklch(0.52_0.14_38)] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px)"
+          }}
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
