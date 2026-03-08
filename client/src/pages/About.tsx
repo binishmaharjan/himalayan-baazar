@@ -6,11 +6,9 @@
  * Fonts: Playfair Display (headings) + Lato (body)
  */
 import { motion, type Transition } from "framer-motion";
-import { Heart, Users, Globe, Award, CheckCircle } from "lucide-react";
+import { Heart, Users, Globe, Award, CheckCircle, ImageOff } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663413124505/525q8PM2kAPEprfxnwWS5B/about-store-keB7DEfspjBgMptMvueZ2a.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -44,57 +42,17 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: "Ramesh Shrestha",
-    role: "Founder & Owner",
-    bio: "Originally from Kathmandu, Ramesh moved to Tokyo in 2010 and founded Himalayan Bazaar in 2015 after struggling to find authentic Nepali ingredients.",
-    initials: "RS",
-    color: "bg-[oklch(0.52_0.14_38)]",
-  },
-  {
-    name: "Sunita Tamang",
-    role: "Store Manager",
-    bio: "Sunita brings 8 years of retail experience and an encyclopaedic knowledge of Nepali cooking. She personally curates our spice selection.",
-    initials: "ST",
-    color: "bg-[oklch(0.32_0.09_145)]",
-  },
-  {
-    name: "Bikash Rai",
-    role: "Procurement Lead",
-    bio: "Bikash travels to Nepal twice a year to source the finest products directly from farmers and producers across the country.",
-    initials: "BR",
-    color: "bg-[oklch(0.62_0.12_55)]",
-  },
-  {
-    name: "Priya Gurung",
-    role: "Customer Relations",
-    bio: "Priya ensures every customer feels at home. She speaks Nepali, Hindi, English, and Japanese — a true bridge between cultures.",
-    initials: "PG",
-    color: "bg-[oklch(0.42_0.10_40)]",
-  },
-];
-
-const milestones = [
-  { year: "2015", event: "Himalayan Bazaar opens its first store in Shin-Okubo, Tokyo" },
-  { year: "2017", event: "Expanded product range to over 200 items; launched weekly fresh produce delivery" },
-  { year: "2019", event: "Received the 'Best Ethnic Grocery' award from the Tokyo Food Association" },
-  { year: "2021", event: "Survived the pandemic by pivoting to home delivery across the Kanto region" },
-  { year: "2023", event: "Expanded to a larger store space; now stocking 500+ authentic products" },
-  { year: "2024", event: "Celebrating 9 years of serving the Nepali community in Japan" },
-];
-
 export default function About() {
   return (
     <div className="min-h-screen bg-[oklch(0.985_0.012_80)]">
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-28 pb-14 bg-[oklch(0.52_0.14_38)] relative overflow-hidden">
+      <section className="pt-28 pb-14 bg-[oklch(0.22_0.07_145)] relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: "repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.08) 20px, rgba(255,255,255,0.08) 40px)",
+            backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.05) 20px, rgba(255,255,255,0.05) 40px)",
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -103,14 +61,14 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-body text-xs font-semibold tracking-[0.25em] text-[oklch(0.92_0.05_75)] uppercase mb-3">
+            <p className="font-body text-xs font-semibold tracking-[0.25em] text-[oklch(0.72_0.16_65)] uppercase mb-3">
               Our Story
             </p>
             <h1 className="font-display text-5xl sm:text-6xl font-black text-white mb-4">
               About Us
             </h1>
             <p className="font-body text-lg text-white/80 max-w-xl">
-              A family-run Nepali grocery store in the heart of Tokyo, built on love for our culture and community.
+              A family-run Nepali grocery store in the heart of Japan, built on love for our culture and community.
             </p>
           </motion.div>
         </div>
@@ -128,12 +86,9 @@ export default function About() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={ABOUT_IMG}
-                  alt="Himalayan Bazaar store interior"
-                  className="w-full h-[480px] object-cover"
-                />
+              <div className="rounded-2xl overflow-hidden shadow-2xl bg-[oklch(0.94_0.02_80)] w-full h-[480px] flex items-center justify-center">
+                <ImageOff className="w-24 h-24 text-[oklch(0.65_0.08_60)]" aria-hidden />
+                <span className="sr-only">Image placeholder</span>
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-[oklch(0.72_0.16_65)] rounded-2xl p-5 shadow-xl">
@@ -158,7 +113,7 @@ export default function About() {
                 custom={1}
                 className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)] mb-6"
               >
-                From Kathmandu to Tokyo — A Story of Home
+                From Kathmandu to Japan — A Story of Home
               </motion.h2>
               <motion.div
                 variants={fadeUp}
@@ -166,10 +121,10 @@ export default function About() {
                 className="space-y-4 font-body text-[oklch(0.38_0.05_60)] leading-relaxed"
               >
                 <p>
-                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Ramesh Shrestha arrived in Tokyo in 2010, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
+                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Lyatosh Rai arrived in Japan in 2013, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
                 </p>
                 <p>
-                  After years of improvising with substitute ingredients and making expensive trips to import shops, Ramesh decided to do something about it. In 2015, he opened Himalayan Bazaar in Shin-Okubo — Tokyo's multicultural heart — with a modest selection of 80 products and a big dream.
+                  After years of improvising with substitute ingredients and making expensive trips to import shops, Lyatosh decided to do something about it. In 2015, he opened Himalayan Bazaar in Japan's multicultural heart — with a modest selection of 80 products and a big dream.
                 </p>
                 <p>
                   Today, we stock over 500 authentic Nepali and South Asian products, serve thousands of customers across Japan, and have become more than just a grocery store. We are a community hub — a place where Nepalis gather, share recipes, celebrate festivals, and feel a little closer to home.
@@ -196,7 +151,12 @@ export default function About() {
       </section>
 
       {/* ─── VALUES ─── */}
-      <section className="py-20 bg-[oklch(0.22_0.07_145)]">
+      <section className="py-16 bg-[oklch(0.52_0.14_38)] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px)"
+          }}
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -241,121 +201,6 @@ export default function About() {
                 <p className="font-body text-sm text-white/70 leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TEAM ─── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <motion.div variants={fadeUp} custom={0} className="flex justify-center mb-4">
-              <div className="section-divider" />
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              custom={1}
-              className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)]"
-            >
-              Meet Our Team
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              custom={2}
-              className="font-body text-[oklch(0.52_0.05_60)] mt-3 max-w-xl mx-auto"
-            >
-              The passionate people behind Himalayan Bazaar who make every visit feel like coming home.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                custom={i * 0.15}
-                className="bg-[oklch(0.985_0.012_80)] rounded-2xl p-7 border border-amber-100 hover:shadow-lg transition-shadow duration-300 text-center"
-              >
-                <div className={`w-16 h-16 rounded-full ${member.color} flex items-center justify-center mx-auto mb-4 shadow-md`}>
-                  <span className="font-display text-xl font-bold text-white">{member.initials}</span>
-                </div>
-                <h3 className="font-display text-lg font-bold text-[oklch(0.22_0.05_50)] mb-1">
-                  {member.name}
-                </h3>
-                <p className="font-body text-xs font-semibold text-[oklch(0.52_0.14_38)] uppercase tracking-wider mb-3">
-                  {member.role}
-                </p>
-                <p className="font-body text-sm text-[oklch(0.52_0.05_60)] leading-relaxed">
-                  {member.bio}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── MILESTONES ─── */}
-      <section className="py-20 bg-[oklch(0.985_0.012_80)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <motion.div variants={fadeUp} custom={0} className="flex justify-center mb-4">
-              <div className="section-divider" />
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              custom={1}
-              className="font-display text-4xl font-bold text-[oklch(0.22_0.05_50)]"
-            >
-              Our Journey
-            </motion.h2>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[oklch(0.52_0.14_38)] to-[oklch(0.72_0.16_65)]" />
-
-            <div className="space-y-8">
-              {milestones.map((m, i) => (
-                <motion.div
-                  key={m.year}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  custom={i * 0.1}
-                  className="flex gap-6 items-start pl-2"
-                >
-                  {/* Dot */}
-                  <div className="relative z-10 shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-[oklch(0.52_0.14_38)] flex items-center justify-center shadow-md">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  {/* Content */}
-                  <div className="bg-white rounded-xl p-5 border border-amber-100 flex-1 shadow-sm">
-                    <p className="font-display text-lg font-bold text-[oklch(0.52_0.14_38)] mb-1">
-                      {m.year}
-                    </p>
-                    <p className="font-body text-sm text-[oklch(0.38_0.05_60)] leading-relaxed">
-                      {m.event}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

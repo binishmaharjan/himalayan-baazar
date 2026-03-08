@@ -7,7 +7,7 @@
  */
 import { useState } from "react";
 import { motion, type Transition } from "framer-motion";
-import { Search, Tag, Package } from "lucide-react";
+import { Search, Tag, Package, ImageOff } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -79,18 +79,6 @@ const tagColors: Record<string, string> = {
   "Festive": "bg-rose-600 text-white",
   "Iconic": "bg-indigo-600 text-white",
   "Street Food": "bg-orange-600 text-white",
-};
-
-// Unsplash images keyed by category
-const categoryImages: Record<string, string> = {
-  "Spices & Masala": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80",
-  "Dal & Lentils": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80",
-  "Grains & Rice": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80",
-  "Snacks & Noodles": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80",
-  "Pickles & Condiments": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80",
-  "Fresh Produce": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80",
-  "Beverages & Tea": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80",
-  "Dairy & Ghee": "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=400&q=80",
 };
 
 export default function Products() {
@@ -208,12 +196,9 @@ export default function Products() {
                   className="group bg-white rounded-2xl overflow-hidden border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Product image */}
-                  <div className="relative aspect-square overflow-hidden bg-[oklch(0.94_0.015_75)]">
-                    <img
-                      src={categoryImages[product.category] || "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80"}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                  <div className="relative aspect-square overflow-hidden bg-[oklch(0.94_0.015_75)] flex items-center justify-center">
+                    <ImageOff className="w-16 h-16 text-[oklch(0.65_0.08_60)]" aria-hidden />
+                    <span className="sr-only">Image placeholder</span>
                     {product.tag && (
                       <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-body font-bold ${tagColors[product.tag] || "bg-gray-600 text-white"}`}>
                         <Tag className="w-2.5 h-2.5 inline mr-1" />
