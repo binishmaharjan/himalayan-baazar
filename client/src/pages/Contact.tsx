@@ -50,11 +50,11 @@ export default function Contact() {
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-28 pb-14 bg-[oklch(0.32_0.09_145)] relative overflow-hidden">
+      <section className="pt-28 pb-14 bg-[oklch(0.22_0.07_145)] relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: "repeating-linear-gradient(60deg, transparent, transparent 20px, rgba(255,255,255,0.06) 20px, rgba(255,255,255,0.06) 40px)",
+            backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.05) 20px, rgba(255,255,255,0.05) 40px)",
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
