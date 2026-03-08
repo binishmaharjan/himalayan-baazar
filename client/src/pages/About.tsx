@@ -6,11 +6,9 @@
  * Fonts: Playfair Display (headings) + Lato (body)
  */
 import { motion, type Transition } from "framer-motion";
-import { Heart, Users, Globe, Award, CheckCircle } from "lucide-react";
+import { Heart, Users, Globe, Award, CheckCircle, ImageOff } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663413124505/525q8PM2kAPEprfxnwWS5B/about-store-keB7DEfspjBgMptMvueZ2a.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -88,12 +86,9 @@ export default function About() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={ABOUT_IMG}
-                  alt="Himalayan Bazaar store interior"
-                  className="w-full h-[480px] object-cover"
-                />
+              <div className="rounded-2xl overflow-hidden shadow-2xl bg-[oklch(0.94_0.02_80)] w-full h-[480px] flex items-center justify-center">
+                <ImageOff className="w-24 h-24 text-[oklch(0.65_0.08_60)]" aria-hidden />
+                <span className="sr-only">Image placeholder</span>
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-[oklch(0.72_0.16_65)] rounded-2xl p-5 shadow-xl">
@@ -126,7 +121,7 @@ export default function About() {
                 className="space-y-4 font-body text-[oklch(0.38_0.05_60)] leading-relaxed"
               >
                 <p>
-                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Ramesh Shrestha arrived in Japan in 2010, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
+                  Himalayan Bazaar was born out of a simple longing — the kind every Nepali living abroad knows well. When our founder Lyatosh Rai arrived in Japan in 2013, he found a vibrant city full of opportunity, but something was missing: the smell of turmeric sizzling in mustard oil, the earthy aroma of freshly ground timur, the comforting taste of dal bhat after a long day.
                 </p>
                 <p>
                   After years of improvising with substitute ingredients and making expensive trips to import shops, Ramesh decided to do something about it. In 2015, he opened Himalayan Bazaar in Japan's multicultural heart — with a modest selection of 80 products and a big dream.
